@@ -5,12 +5,18 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/playwright/.auth/
 
-# Environment variables (confidential)
+# Auth state — generated at runtime, contains session credentials
+/.auth/
+
+# Logs — auto-created by Winston
+/logs/
+
+# Environment variables (contain credentials)
+env/
 .env
 .env.*
-env/
-*.env.local
-*.env.staging
-*.env.production
+!.env.example
+
+# Claude Code local settings
+.claude/settings.local.json

@@ -1,15 +1,9 @@
 export function validateEnv(): string[] {
-  const required = ["BASE_URL", "MY_USERNAME", "MY_PASSWORD", "API_KEY"];
-  const missing: string[] = [];
+  const required = ["BASE_URL", "MY_USERNAME", "MY_PASSWORD"];
 
-  required.forEach((key) => {
-    const value = process.env[key];
-
-    if (!value || value.trim() === "") {
-      console.log(`❌ Missing required env: ${key}`);
-      missing.push(key);
-    }
+  return required.filter((key) => {
+    const missing = !process.env[key]?.trim();
+    if (missing) console.error(`❌ Missing required env: ${key}`);
+    return missing;
   });
-
-  return missing;
 }
