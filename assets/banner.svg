@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#45ba4b"/>
+      <stop offset="50%" style="stop-color:#2ea043"/>
+      <stop offset="100%" style="stop-color:#45ba4b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="300" fill="url(#bg)" rx="8"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1280" y2="60"/>
+    <line x1="0" y1="120" x2="1280" y2="120"/>
+    <line x1="0" y1="180" x2="1280" y2="180"/>
+    <line x1="0" y1="240" x2="1280" y2="240"/>
+    <line x1="160" y1="0" x2="160" y2="300"/>
+    <line x1="320" y1="0" x2="320" y2="300"/>
+    <line x1="480" y1="0" x2="480" y2="300"/>
+    <line x1="640" y1="0" x2="640" y2="300"/>
+    <line x1="800" y1="0" x2="800" y2="300"/>
+    <line x1="960" y1="0" x2="960" y2="300"/>
+    <line x1="1120" y1="0" x2="1120" y2="300"/>
+  </g>
+
+  <!-- Green accent bar top -->
+  <rect x="0" y="0" width="1280" height="3" fill="url(#accent)" rx="0"/>
+
+  <!-- Camera/screenshot icon left -->
+  <g transform="translate(110, 138)" opacity="0.15">
+    <rect x="-32" y="-22" width="64" height="50" rx="6" fill="none" stroke="#45ba4b" stroke-width="2.5"/>
+    <circle cx="0" cy="6" r="14" fill="none" stroke="#45ba4b" stroke-width="2.5"/>
+    <circle cx="0" cy="6" r="6" fill="#45ba4b" opacity="0.5"/>
+    <rect x="10" y="-22" width="12" height="8" rx="2" fill="#45ba4b" opacity="0.4"/>
+  </g>
+
+  <!-- Main title -->
+  <text
+    x="640"
+    y="160"
+    font-family="'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="92"
+    font-weight="800"
+    letter-spacing="-2"
+    text-anchor="middle"
+    fill="#ffffff"
+    filter="url(#glow)"
+  >PLAYWRIGHT</text>
+
+  <!-- Subtitle -->
+  <text
+    x="640"
+    y="210"
+    font-family="'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="16"
+    font-weight="400"
+    letter-spacing="8"
+    text-anchor="middle"
+    fill="#45ba4b"
+  >VISUAL  TESTING</text>
+
+  <!-- Bottom divider line -->
+  <rect x="540" y="232" width="200" height="1" fill="url(#accent)" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text
+    x="640"
+    y="260"
+    font-family="'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="13"
+    font-weight="400"
+    letter-spacing="1"
+    text-anchor="middle"
+    fill="#8b949e"
+  >Pixel-perfect visual regression testing for OrangeHRM</text>
+
+  <!-- Green accent bar bottom -->
+  <rect x="0" y="297" width="1280" height="3" fill="url(#accent)" rx="0"/>
+</svg>
